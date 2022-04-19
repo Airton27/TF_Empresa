@@ -44,8 +44,8 @@
 				value="#{empresaController.e.claveEmpresa}"></p:inputText>
 
 			<p:commandButton value="Grabar"
-				actionListener="##{empresaController.insert()}"
-				action="empresa?faces-redirect-true" update="@form"></p:commandButton>
+				actionListener="#{empresaController.insert()}"
+				action="empresa?faces-redirect-true" update="@form" />
 		</h:form>
 
 
