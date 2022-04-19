@@ -1,11 +1,39 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:h="http://java.sun.com/jsf/html"> 
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
 
-<h:head></h:head> 
-<body> 
+<h:head>
+	<link rel="stylesheet"
+		href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+</h:head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light"> <a
+		class="navbar-brand" href="#">Navbar</a>
 
-</body> 
+	<div class="collapse navbar-collapse" id="navbarNav">
+		<ul class="navbar-nav">
+			<li class="nav-item active"><a class="nav-link"
+				href="panel.xhtml">Home <span class="sr-only">(current)</span>
+			</a></li>
+			<li class="nav-item"><a class="nav-link" href="empresa.xhtml">Registro
+					de empresas</a></li>
+			<li class="nav-item"><a class="nav-link"
+				href="listaPersonas.xhtml">Lista de empresas</a></li>
+
+		</ul>
+	</div>
+	</nav>
+
+	<div class="container">
+		<ui:insert name="content"></ui:insert>
+
+	</div>
+	<div>
+		<ui:insert name="footerCont"></ui:insert>
+
+	</div>
+
+</body>
 </html>
