@@ -5,7 +5,7 @@ import java.util.List;
 import pe.edu.upc.entities.Empresa;
 
 public interface IEmpresaService {
-	public void insert(Empresa e);
+	public void insert(Empresa emp);
 
 	public List<Empresa> list();
 

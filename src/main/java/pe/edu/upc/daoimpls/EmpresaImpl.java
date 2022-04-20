@@ -19,10 +19,11 @@ public class EmpresaImpl implements IEmpresaDao {
 
 	@Transactional
 	@Override
-	public void insert(Empresa emp) {
+	public void insert(Empresa e) {
 		try {
-			em.persist(emp);
-		} catch (Exception e) {
+			em.persist(e);
+
+		} catch (Exception e2) {
 			System.out.println("Error al insertar empresa en el DAO");
 		}
 
@@ -33,9 +34,9 @@ public class EmpresaImpl implements IEmpresaDao {
 	public List<Empresa> list() {
 		List<Empresa> listaEmpresas = new ArrayList<Empresa>();
 		try {
-			Query jpql = em.createQuery("from Empresa emp");
+			Query jpql = em.createQuery("from Empresa e");
 			listaEmpresas = (List<Empresa>) jpql.getResultList();
-		} catch (Exception e) {
+		} catch (Exception e2) {
 			System.out.println("Error al listar en el DAO de empresa");
 		}
 
@@ -46,10 +47,10 @@ public class EmpresaImpl implements IEmpresaDao {
 	@Override
 	public void delete(int id) {
 		try {
-			Empresa emp = em.find(Empresa.class, id);
-			em.remove(emp);
+			Empresa e = em.find(Empresa.class, id);
+			em.remove(e);
 
-		} catch (Exception e) {
+		} catch (Exception e2) {
 			System.out.println("Error al eliminar en el DAO de empresa");
 		}
 
