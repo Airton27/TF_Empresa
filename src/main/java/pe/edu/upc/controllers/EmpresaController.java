@@ -16,6 +16,9 @@ import pe.edu.upc.serviceinterfaces.IEmpresaService;
 public class EmpresaController {
 	@Inject
 	private IEmpresaService eService;
+	// atributos
+	private Empresa emp;
+	List<Empresa> listaEmpresas;
 
 	// metodos
 	@PostConstruct
@@ -53,10 +56,6 @@ public class EmpresaController {
 			System.out.println("Error al eliminar empresas en el controller");
 		}
 	}
-
-	// atributos
-	private Empresa emp;
-	List<Empresa> listaEmpresas;
 
 	// getters & setters
 	public Empresa getE() {
