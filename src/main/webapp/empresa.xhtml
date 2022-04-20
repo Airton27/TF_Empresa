@@ -4,7 +4,7 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:p="http://primefaces.org/ui">
-<ui:composition template="master.xhtml">
+<ui:composition template="/master.xhtml">
 	<ui:define name="content">
 		<h2>Registro de empresas</h2>
 		<h:form>
@@ -43,7 +43,7 @@
 			<p:inputText id="clave" styleClass="form-control"
 				value="#{empresaController.e.claveEmpresa}"></p:inputText>
 
-			<p:commandButton value="Grabar"
+			<p:commandButton value="Registrar"
 				actionListener="#{empresaController.insert()}"
 				action="empresa?faces-redirect=true" update="@form"></p:commandButton>
 		</h:form>

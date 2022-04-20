@@ -9,8 +9,8 @@
 	<ui:define name="content">
 		<h2>Listas de empresas</h2>
 		<h:form>
-			<p:dataTable id="lstPersona"
-				value="#{empresaController.listaEmpresas}" var="pe"
+			<p:dataTable id="lstPersona" var="pe"
+				value="#{empresaController.listaEmpresas}" paginator="true"
 				paginatorPosition="top" rowsPerPageTemplate="5,10,15,20,25" rows="5"
 				rowIndexVar="item" emptyMessage="No existen personas en la lista">
 
