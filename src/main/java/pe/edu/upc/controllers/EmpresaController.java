@@ -21,7 +21,7 @@ public class EmpresaController {
 	@PostConstruct
 	public void init() {
 		this.listaEmpresas = new ArrayList<Empresa>();
-		this.e = new Empresa();
+		this.emp = new Empresa();
 		this.list();
 	}
 
@@ -32,7 +32,7 @@ public class EmpresaController {
 
 	public void insert() {
 		try {
-			eService.insert(e);
+			eService.insert(emp);
 		} catch (Exception e) {
 			System.out.println("Error ocurrio en el controlador de empresa al insertar");
 		}
@@ -46,25 +46,25 @@ public class EmpresaController {
 		}
 	}
 
-	public void delete(Empresa ems) {
+	public void delete(Empresa emp) {
 		try {
-			eService.delete(ems.getIdEmpresa());
+			eService.delete(emp.getIdEmpresa());
 		} catch (Exception e) {
 			System.out.println("Error al eliminar empresas en el controller");
 		}
 	}
 
 	// atributos
-	private Empresa e;
+	private Empresa emp;
 	List<Empresa> listaEmpresas;
 
 	// getters & setters
 	public Empresa getE() {
-		return e;
+		return emp;
 	}
 
-	public void setE(Empresa e) {
-		this.e = e;
+	public void setE(Empresa emp) {
+		this.emp = emp;
 	}
 
 	public List<Empresa> getListaEmpresas() {
