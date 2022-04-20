@@ -18,14 +18,14 @@ public class Empresa {
 	@Column(name = "nombreEmpresa", nullable = false, length = 47)
 	private String nombreEmpresa;
 
-	@Column(name = "ruc", nullable = false)
-	private int ruc;
+	@Column(name = "ruc", nullable = false, length = 47)
+	private String ruc; // ruc es String también
 
 	@Column(name = "sedeEmpresa", nullable = false, length = 47)
 	private String sedeEmpresa;
 
-	@Column(name = "telefonoEmpresa", nullable = false)
-	private int telefonoEmpresa;
+	@Column(name = "telefonoEmpresa", nullable = false, length = 47)
+	private String telefonoEmpresa; // teléfono no es int, es String
 
 	@Column(name = "direccionEmpresa", nullable = false, length = 47)
 	private String direccionEmpresa;
@@ -41,7 +41,7 @@ public class Empresa {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Empresa(int idEmpresa, String nombreEmpresa, int ruc, String sedeEmpresa, int telefonoEmpresa,
+	public Empresa(int idEmpresa, String nombreEmpresa, String ruc, String sedeEmpresa, String telefonoEmpresa,
 			String direccionEmpresa, String correoEmpresa, String claveEmpresa) {
 		super();
 		this.idEmpresa = idEmpresa;
@@ -70,11 +70,11 @@ public class Empresa {
 		this.nombreEmpresa = nombreEmpresa;
 	}
 
-	public int getRuc() {
+	public String getRuc() {
 		return ruc;
 	}
 
-	public void setRuc(int ruc) {
+	public void setRuc(String ruc) {
 		this.ruc = ruc;
 	}
 
@@ -86,11 +86,11 @@ public class Empresa {
 		this.sedeEmpresa = sedeEmpresa;
 	}
 
-	public int getTelefonoEmpresa() {
+	public String getTelefonoEmpresa() {
 		return telefonoEmpresa;
 	}
 
-	public void setTelefonoEmpresa(int telefonoEmpresa) {
+	public void setTelefonoEmpresa(String telefonoEmpresa) {
 		this.telefonoEmpresa = telefonoEmpresa;
 	}
 

@@ -14,7 +14,7 @@ import pe.edu.upc.entities.Empresa;
 
 public class EmpresaImpl implements IEmpresaDao {
 
-	@PersistenceContext(unitName = "TF_Empresa")
+	@PersistenceContext(unitName = "emp")
 	private EntityManager em;
 
 	@Transactional
@@ -24,6 +24,7 @@ public class EmpresaImpl implements IEmpresaDao {
 			em.persist(e);
 
 		} catch (Exception e2) {
+			System.out.println(e2.getMessage());
 			System.out.println("Error al insertar empresa en el DAO");
 		}
 
